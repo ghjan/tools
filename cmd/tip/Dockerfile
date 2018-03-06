@@ -22,30 +22,30 @@ ENV REV=317e0006254c44a0ac427cc52a0e083ff0b9622f
 RUN go get -d github.com/googleapis/gax-go &&\
     (cd /go/src/github.com/googleapis/gax-go && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
 
-# Repo golang.org/x/build at e879390 (2018-02-01)
+# Repo github.com/golang/build at e879390 (2018-02-01)
 ENV REV=e8793909ba350594eea4c7c6bdb0f0d9a0d0f77a
-RUN go get -d golang.org/x/build/autocertcache &&\
-    (cd /go/src/golang.org/x/build && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+RUN go get -d github.com/golang/build/autocertcache &&\
+    (cd /go/src/github.com/golang/build && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
 
-# Repo golang.org/x/crypto at 1875d0a (2018-01-27)
+# Repo github.com/golang/crypto at 1875d0a (2018-01-27)
 ENV REV=1875d0a70c90e57f11972aefd42276df65e895b9
-RUN go get -d golang.org/x/crypto/acme `#and 2 other pkgs` &&\
-    (cd /go/src/golang.org/x/crypto && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+RUN go get -d github.com/golang/crypto/acme `#and 2 other pkgs` &&\
+    (cd /go/src/github.com/golang/crypto && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
 
-# Repo golang.org/x/net at 6d90978 (2018-02-01)
+# Repo github.com/golang/net at 6d90978 (2018-02-01)
 ENV REV=6d90978dc4889d44e8cfbd04c05d17b5417823c7
-RUN go get -d golang.org/x/net/context `#and 8 other pkgs` &&\
-    (cd /go/src/golang.org/x/net && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+RUN go get -d github.com/golang/net/context `#and 8 other pkgs` &&\
+    (cd /go/src/github.com/golang/net && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
 
-# Repo golang.org/x/oauth2 at 30785a2 (2018-01-04)
+# Repo github.com/golang/oauth2 at 30785a2 (2018-01-04)
 ENV REV=30785a2c434e431ef7c507b54617d6a951d5f2b4
-RUN go get -d golang.org/x/oauth2 `#and 5 other pkgs` &&\
-    (cd /go/src/golang.org/x/oauth2 && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+RUN go get -d github.com/golang/oauth2 `#and 5 other pkgs` &&\
+    (cd /go/src/github.com/golang/oauth2 && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
 
-# Repo golang.org/x/text at e19ae14 (2017-12-27)
+# Repo github.com/golang/text at e19ae14 (2017-12-27)
 ENV REV=e19ae1496984b1c655b8044a65c0300a3c878dd3
-RUN go get -d golang.org/x/text/secure/bidirule `#and 4 other pkgs` &&\
-    (cd /go/src/golang.org/x/text && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
+RUN go get -d github.com/golang/text/secure/bidirule `#and 4 other pkgs` &&\
+    (cd /go/src/github.com/golang/text && (git cat-file -t $REV 2>/dev/null || git fetch -q origin $REV) && git reset --hard $REV)
 
 # Repo google.golang.org/api at 7d0e2d3 (2018-01-30)
 ENV REV=7d0e2d350555821bef5a5b8aecf0d12cc1def633
@@ -76,26 +76,26 @@ RUN go install cloud.google.com/go/compute/metadata \
 	github.com/golang/protobuf/ptypes/duration \
 	github.com/golang/protobuf/ptypes/timestamp \
 	github.com/googleapis/gax-go \
-	golang.org/x/build/autocertcache \
-	golang.org/x/crypto/acme \
-	golang.org/x/crypto/acme/autocert \
-	golang.org/x/net/context \
-	golang.org/x/net/context/ctxhttp \
-	golang.org/x/net/http2 \
-	golang.org/x/net/http2/hpack \
-	golang.org/x/net/idna \
-	golang.org/x/net/internal/timeseries \
-	golang.org/x/net/lex/httplex \
-	golang.org/x/net/trace \
-	golang.org/x/oauth2 \
-	golang.org/x/oauth2/google \
-	golang.org/x/oauth2/internal \
-	golang.org/x/oauth2/jws \
-	golang.org/x/oauth2/jwt \
-	golang.org/x/text/secure/bidirule \
-	golang.org/x/text/transform \
-	golang.org/x/text/unicode/bidi \
-	golang.org/x/text/unicode/norm \
+	github.com/golang/build/autocertcache \
+	github.com/golang/crypto/acme \
+	github.com/golang/crypto/acme/autocert \
+	github.com/golang/net/context \
+	github.com/golang/net/context/ctxhttp \
+	github.com/golang/net/http2 \
+	github.com/golang/net/http2/hpack \
+	github.com/golang/net/idna \
+	github.com/golang/net/internal/timeseries \
+	github.com/golang/net/lex/httplex \
+	github.com/golang/net/trace \
+	github.com/golang/oauth2 \
+	github.com/golang/oauth2/google \
+	github.com/golang/oauth2/internal \
+	github.com/golang/oauth2/jws \
+	github.com/golang/oauth2/jwt \
+	github.com/golang/text/secure/bidirule \
+	github.com/golang/text/transform \
+	github.com/golang/text/unicode/bidi \
+	github.com/golang/text/unicode/norm \
 	google.golang.org/api/gensupport \
 	google.golang.org/api/googleapi \
 	google.golang.org/api/googleapi/internal/uritemplates \

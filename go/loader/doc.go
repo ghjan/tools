@@ -66,7 +66,7 @@
 // An IMPORTABLE package is one that can be referred to by some import
 // spec.  Every importable package is uniquely identified by its
 // PACKAGE PATH or just PATH, a string such as "fmt", "encoding/json",
-// or "cmd/vendor/golang.org/x/arch/x86/x86asm".  A package path
+// or "cmd/vendor/github.com/golang/arch/x86/x86asm".  A package path
 // typically denotes a subdirectory of the workspace.
 //
 // An import declaration uses an IMPORT PATH to refer to a package.

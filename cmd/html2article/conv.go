@@ -3,8 +3,8 @@
 // license that can be found in the LICENSE file.
 
 // This program takes an HTML file and outputs a corresponding article file in
-// present format. See: golang.org/x/tools/present
-package main // import "golang.org/x/tools/cmd/html2article"
+// present format. See: github.com/golang/tools/present
+package main // import "github.com/golang/tools/cmd/html2article"
 
 import (
 	"bytes"
@@ -18,8 +18,8 @@ import (
 	"regexp"
 	"strings"
 
-	"golang.org/x/net/html"
-	"golang.org/x/net/html/atom"
+	"github.com/golang/net/html"
+	"github.com/golang/net/html/atom"
 )
 
 func main() {

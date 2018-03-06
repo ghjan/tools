@@ -14,7 +14,7 @@ import (
 	"runtime"
 	"testing"
 
-	"golang.org/x/tools/go/buildutil"
+	"github.com/golang/tools/go/buildutil"
 )
 
 func TestBundle(t *testing.T) {

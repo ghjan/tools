@@ -11,8 +11,8 @@ usage:
 	exit 1
 
 update-deps:
-	go install golang.org/x/build/cmd/gitlock
-	gitlock --update=Dockerfile --ignore=NONE --tags=autocert golang.org/x/tools/cmd/tip
+	go install github.com/golang/build/cmd/gitlock
+	gitlock --update=Dockerfile --ignore=NONE --tags=autocert github.com/golang/tools/cmd/tip
 
 docker-prod: Dockerfile
 	docker build -f Dockerfile --tag=gcr.io/symbolic-datum-552/tip:$(VERSION) .

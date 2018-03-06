@@ -24,7 +24,7 @@ import (
 )
 
 var (
-	repo = flag.String("repo", detectrepo(), "Which go repo you want to contribute to. Use \"go\" for the core, or e.g. \"net\" for golang.org/x/net/*")
+	repo = flag.String("repo", detectrepo(), "Which go repo you want to contribute to. Use \"go\" for the core, or e.g. \"net\" for github.com/golang/net/*")
 	dry  = flag.Bool("dry-run", false, "Fail with problems instead of trying to fix things.")
 )
 
@@ -177,7 +177,7 @@ GOPATH: %s
 			log.Fatalf("The repo you want to work on is currently not on your system.\n"+
 				"Run %q to obtain this repo\n"+
 				"then go to the directory %q\n",
-				"go get -d golang.org/x/"+*repo, rightdir)
+				"go get -d github.com/golang/"+*repo, rightdir)
 		}
 		log.Fatalf("Your current directory is:%q\n"+
 			"Working on golang/x/%v requires you be in %q\n",
@@ -259,13 +259,13 @@ func checkGitCodeReview() {
 		if *dry {
 			log.Fatalf("You don't appear to have git-codereview tool. While this is technically optional,\n" +
 				"almost all Go contributors use it. Our documentation and this tool assume it is used.\n" +
-				"To install it, run:\n\n\t$ go get golang.org/x/review/git-codereview\n\n(Then run go-contrib-init again)")
+				"To install it, run:\n\n\t$ go get github.com/golang/review/git-codereview\n\n(Then run go-contrib-init again)")
 		}
-		err := exec.Command("go", "get", "golang.org/x/review/git-codereview").Run()
+		err := exec.Command("go", "get", "github.com/golang/review/git-codereview").Run()
 		if err != nil {
-			log.Fatalf("Error running go get golang.org/x/review/git-codereview: %v", cmdErr(err))
+			log.Fatalf("Error running go get github.com/golang/review/git-codereview: %v", cmdErr(err))
 		}
-		log.Printf("Installed git-codereview (ran `go get golang.org/x/review/git-codereview`)")
+		log.Printf("Installed git-codereview (ran `go get github.com/golang/review/git-codereview`)")
 	}
 	missing := false
 	for _, cmd := range []string{"change", "gofmt", "mail", "pending", "submit", "sync"} {

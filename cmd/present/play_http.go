@@ -9,9 +9,9 @@ package main
 import (
 	"net/url"
 
-	"golang.org/x/tools/present"
+	"github.com/golang/tools/present"
 
-	_ "golang.org/x/tools/playground"
+	_ "github.com/golang/tools/playground"
 )
 
 func initPlayground(basepath string, origin *url.URL) {

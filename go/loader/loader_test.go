@@ -20,8 +20,8 @@ import (
 	"sync"
 	"testing"
 
-	"golang.org/x/tools/go/buildutil"
-	"golang.org/x/tools/go/loader"
+	"github.com/golang/tools/go/buildutil"
+	"github.com/golang/tools/go/loader"
 )
 
 // TestFromArgs checks that conf.FromArgs populates conf correctly.

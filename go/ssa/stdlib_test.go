@@ -21,10 +21,10 @@ import (
 	"testing"
 	"time"
 
-	"golang.org/x/tools/go/buildutil"
-	"golang.org/x/tools/go/loader"
-	"golang.org/x/tools/go/ssa"
-	"golang.org/x/tools/go/ssa/ssautil"
+	"github.com/golang/tools/go/buildutil"
+	"github.com/golang/tools/go/loader"
+	"github.com/golang/tools/go/ssa"
+	"github.com/golang/tools/go/ssa/ssautil"
 )
 
 // Skip the set of packages that transitively depend on

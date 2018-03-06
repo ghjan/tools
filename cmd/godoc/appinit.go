@@ -16,14 +16,14 @@ import (
 	"path"
 	"regexp"
 
-	"golang.org/x/tools/godoc"
-	"golang.org/x/tools/godoc/dl"
-	"golang.org/x/tools/godoc/proxy"
-	"golang.org/x/tools/godoc/short"
-	"golang.org/x/tools/godoc/static"
-	"golang.org/x/tools/godoc/vfs"
-	"golang.org/x/tools/godoc/vfs/mapfs"
-	"golang.org/x/tools/godoc/vfs/zipfs"
+	"github.com/golang/tools/godoc"
+	"github.com/golang/tools/godoc/dl"
+	"github.com/golang/tools/godoc/proxy"
+	"github.com/golang/tools/godoc/short"
+	"github.com/golang/tools/godoc/static"
+	"github.com/golang/tools/godoc/vfs"
+	"github.com/golang/tools/godoc/vfs/mapfs"
+	"github.com/golang/tools/godoc/vfs/zipfs"
 
 	"google.golang.org/appengine"
 )

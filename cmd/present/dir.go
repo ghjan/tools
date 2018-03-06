@@ -14,7 +14,7 @@ import (
 	"path/filepath"
 	"sort"
 
-	"golang.org/x/tools/present"
+	"github.com/golang/tools/present"
 )
 
 func init() {
